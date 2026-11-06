@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b33">
+  <meta name="description" content="KJB - Kami Jaga Batam. Layanan ambulans, dukungan tenaga medis, dan kegiatan kemanusiaan di Batam.">
+  <title>KJB | Kami Jaga Batam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#071b33;--navy2:#0d2c4c;--blue:#1676bd;--red:#e33e48;--ink:#12263a;--muted:#64748b;--paper:#f5f8fb;--white:#fff;--line:#e5edf4;--radius:22px;--shadow:0 18px 50px rgba(7,27,51,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}h1,h2,h3{font-family:Manrope,sans-serif;margin:0;letter-spacing:-.035em}p{line-height:1.75;color:var(--muted)}a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#041326;color:#d9e6f2;font-size:12px;padding:9px 0}.topbar .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,237,244,.9)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;color:var(--navy);letter-spacing:-.04em}.brand-mark{width:43px;height:43px;border-radius:14px;background:var(--navy);display:grid;place-items:center;color:#fff;font-size:17px;position:relative}.brand-mark:after{content:"";position:absolute;width:8px;height:8px;background:var(--red);border-radius:50%;right:5px;top:5px}.brand small{display:block;font:600 9px "DM Sans";letter-spacing:.18em;color:var(--muted);margin-top:2px}.navlinks{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:700;color:#42566b}.navlinks a:hover{color:var(--blue)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 20px;font-weight:700;font-size:13px;transition:.2s;cursor:pointer}.nav-cta,.btn-primary{background:var(--red);color:white;box-shadow:0 9px 22px rgba(227,62,72,.22)}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);background:#ca303b}.menu-toggle{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
+    .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;min-height:650px;display:flex;align-items:center}.hero:before{content:"";position:absolute;width:650px;height:650px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-170px;top:-190px;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.02)}.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:55px;padding:82px 0;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#8fc9f4;font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.eyebrow:before{content:"";width:25px;height:2px;background:var(--red)}.hero h1{font-size:clamp(42px,5.5vw,68px);line-height:1.08;margin:22px 0}.hero h1 span{color:#7fc3f2}.hero-copy{max-width:510px;color:#b8c9d9;font-size:16px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff;background:transparent}.btn-outline:hover{background:rgba(255,255,255,.1)}.hero-note{display:flex;align-items:center;gap:12px;margin-top:36px;color:#a9bdcf;font-size:12px}.status-dot{width:9px;height:9px;border-radius:50%;background:#43c58a;box-shadow:0 0 0 5px rgba(67,197,138,.14)}.hero-photo{height:440px;border-radius:28px;overflow:hidden;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.16)}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}.photo-label{position:absolute;bottom:18px;left:18px;right:18px;padding:17px 20px;background:rgba(5,22,41,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:16px}.photo-label strong{display:block;font-family:Manrope;font-size:14px}.photo-label span{font-size:11px;color:#c2d4e4}
+    .quickbar{background:#fff;box-shadow:var(--shadow);border-radius:18px;padding:23px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:-38px;position:relative;z-index:2}.quick-item{display:flex;gap:13px;align-items:center}.quick-icon{width:43px;height:43px;border-radius:13px;background:#eaf4fb;color:var(--blue);display:grid;place-items:center;font-size:19px}.quick-item b{display:block;font:800 12px Manrope}.quick-item span{font-size:11px;color:var(--muted)}
+    section{padding:100px 0}.section-head{max-width:650px;margin-bottom:42px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.section-head h2{font-size:clamp(30px,4vw,43px);color:var(--navy);margin:14px 0}.section-head p{margin:0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about-visual{height:430px;position:relative}.about-visual img{width:86%;height:100%;object-fit:cover;border-radius:var(--radius)}.about-stamp{position:absolute;right:0;bottom:28px;background:var(--red);color:#fff;padding:24px;border-radius:18px;max-width:190px;box-shadow:var(--shadow)}.about-stamp b{font:800 30px Manrope;display:block}.about-stamp span{font-size:11px;line-height:1.5}.check-list{display:grid;gap:13px;margin:25px 0}.check{display:flex;gap:11px;align-items:flex-start;font-size:14px;font-weight:600}.check i{font-style:normal;background:#e8f6ef;color:#19945d;border-radius:50%;width:22px;height:22px;display:grid;place-items:center;flex:none}
+    .services{background:var(--paper)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;transition:.25s}.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.service-icon{width:51px;height:51px;border-radius:15px;background:#eaf4fb;color:var(--blue);display:grid;place-items:center;font-size:23px;margin-bottom:22px}.service-card h3{font-size:18px;color:var(--navy)}.service-card p{font-size:13px;margin-bottom:0}
+    .gallery-tools{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:-12px 0 28px}.filter{padding:10px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#5b6b7b;font-size:12px;font-weight:700;cursor:pointer}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:#fff}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery-card{height:265px;border-radius:18px;overflow:hidden;position:relative;background:#dce7ef;cursor:pointer}.gallery-card[hidden]{display:none}.gallery-card img{width:100%;height:100%;object-fit:cover;transition:.45s}.gallery-card:hover img{transform:scale(1.06)}.gallery-overlay{position:absolute;inset:auto 0 0;padding:40px 18px 17px;background:linear-gradient(transparent,rgba(3,18,34,.88));color:#fff}.gallery-overlay small{color:#a9d8f7;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.gallery-overlay b{display:block;font:700 14px Manrope;margin-top:5px}
+    .team{background:var(--paper)}.team-card{background:white;border:1px solid var(--line);border-radius:20px;padding:30px;text-align:center}.team-avatar{width:84px;height:84px;margin:0 auto 17px;border-radius:50%;background:#e8f2f9;display:grid;place-items:center;font-size:32px;color:var(--blue)}.team-card h3{font-size:17px}.team-card p{font-size:12px;margin:6px 0 0}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news-card{border:1px solid var(--line);border-radius:19px;overflow:hidden}.news-card img{width:100%;height:190px;object-fit:cover;display:block}.news-body{padding:21px}.news-body small{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.12em}.news-body h3{font-size:17px;margin:9px 0}.news-body p{font-size:12px;margin:0}
+    .contact{background:var(--navy);color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.contact h2{font-size:clamp(32px,4vw,46px);margin:15px 0}.contact p{color:#b6c8d9}.contact-box{background:#fff;color:var(--ink);border-radius:22px;padding:30px}.contact-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}.contact-row .service-icon{margin:0;flex:none}.contact-row b{font-size:13px;display:block}.contact-row span{font-size:12px;color:var(--muted)}footer{background:#041326;color:#9eb2c5;padding:27px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-inner b{color:#fff}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;background:#1fa968;color:white;border-radius:999px;padding:14px 19px;box-shadow:0 12px 30px rgba(0,0,0,.2);font-weight:800;font-size:12px}.wa-float:hover{transform:translateY(-3px)}
+    @media(max-width:900px){.navlinks{gap:14px}.hero-grid{gap:30px}.hero-photo{height:370px}.about-grid,.contact-grid{gap:35px}.gallery-card{height:220px}}
+    @media(max-width:700px){.container{width:min(100% - 30px,560px)}.topbar .container{justify-content:center}.nav{height:68px}.menu-toggle{display:block}.nav-cta{display:none}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 25px 24px;box-shadow:0 18px 25px rgba(7,27,51,.1);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:9px 0}.hero{min-height:0}.hero-grid{grid-template-columns:1fr;padding:65px 0 70px}.hero h1{font-size:44px}.hero-photo{height:300px}.quickbar{grid-template-columns:1fr;margin-top:-25px;padding:20px}.quick-item{padding:4px 0}section{padding:72px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.about-visual{height:330px;order:2}.about-copy{order:1}.service-grid,.news-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}.gallery-card{height:180px;border-radius:13px}.gallery-overlay{padding:35px 11px 12px}.gallery-overlay b{font-size:11px}.gallery-overlay small{font-size:8px}.section-head{margin-bottom:30px}.contact-box{padding:22px}.wa-float{right:13px;bottom:13px;padding:13px 16px}}
+  </style>
+</head>
+<body>
+  <!-- PENTING: Ganti nomor WhatsApp, alamat, foto, dan informasi contoh sebelum website dipublikasikan. -->
+  <div class="topbar"><div class="container"><span>🚑 KJB — Kami Jaga Batam</span><span>Dedikasi • Kepedulian • Kemanusiaan</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark">KJB</span><span>KAMI JAGA BATAM<small>AMBULANCE & MEDICAL SUPPORT</small></span></a>
+      <button class="menu-toggle" aria-label="Buka menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+      <nav class="navlinks">
+        <a href="#home">Beranda</a><a href="#about">Tentang</a><a href="#services">Layanan</a><a href="#gallery">Galeri</a><a href="#team">Tim</a><a href="#news">Kegiatan</a><a href="#contact">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Hubungi KJB ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Ambulance & Medical Support</span>
+          <h1>Siaga untuk<br><span>menjaga sesama.</span></h1>
+          <p class="hero-copy">Kami Jaga Batam hadir dengan semangat kepedulian untuk mendukung kebutuhan layanan ambulans, tenaga medis, dan kegiatan kemanusiaan di Batam.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Hubungi Kami <span>↗</span></a><a class="btn btn-outline" href="#gallery">Lihat Kegiatan ↓</a></div>
+          <div class="hero-note"><span class="status-dot"></span> Mengutamakan kepedulian, keselamatan, dan pelayanan</div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=1200&q=85" alt="Ilustrasi ambulans untuk tampilan awal website KJB">
+          <div class="photo-label"><strong>KAMI JAGA BATAM</strong><span>Bergerak dengan kepedulian untuk masyarakat</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container quickbar">
+      <div class="quick-item"><div class="quick-icon">🚑</div><div><b>Layanan Ambulans</b><span>Dukungan transportasi pasien</span></div></div>
+      <div class="quick-item"><div class="quick-icon">＋</div><div><b>Dukungan Medis</b><span>Personel sesuai kebutuhan kegiatan</span></div></div>
+      <div class="quick-item"><div class="quick-icon">♡</div><div><b>Aksi Kemanusiaan</b><span>Peduli dan hadir untuk sesama</span></div></div>
+    </div>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1000&q=85" alt="Ilustrasi tenaga medis">
+          <div class="about-stamp"><b>KJB</b><span>Kami Jaga Batam<br>Peduli • Sigap • Profesional</span></div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">Tentang Kami</span><div class="section-head"><h2>Hadir untuk membantu, bergerak dengan kepedulian.</h2><p>KJB (Kami Jaga Batam) merupakan organisasi/layanan yang berfokus pada dukungan ambulans dan kegiatan kemanusiaan. Kami percaya bahwa kepedulian, koordinasi, dan pelayanan yang bertanggung jawab memiliki arti penting bagi masyarakat.</p></div>
+          <div class="check-list"><div class="check"><i>✓</i><span>Mengutamakan keselamatan dan kenyamanan pasien.</span></div><div class="check"><i>✓</i><span>Memberikan informasi layanan secara jelas dan transparan.</span></div><div class="check"><i>✓</i><span>Mendukung kegiatan masyarakat sesuai kapasitas tim.</span></div></div>
+          <a class="btn btn-primary" href="#contact">Kenali KJB lebih dekat ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Apa yang Kami Lakukan</span><h2>Layanan KJB</h2><p>Informasi layanan berikut merupakan contoh struktur. Sesuaikan dengan layanan yang benar-benar tersedia dan dapat diberikan oleh KJB.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">🚑</div><h3>Layanan Ambulans</h3><p>Dukungan transportasi pasien sesuai ketersediaan armada, personel, dan kebutuhan layanan.</p></article>
+          <article class="service-card"><div class="service-icon">✚</div><h3>Dukungan Tenaga Medis</h3><p>Dukungan personel medis untuk kegiatan atau kebutuhan tertentu sesuai kompetensi dan ketersediaan.</p></article>
+          <article class="service-card"><div class="service-icon">♡</div><h3>Standby Kegiatan</h3><p>Dukungan ambulans atau tim medis pada kegiatan masyarakat, olahraga, dan acara sesuai kesepakatan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Cerita di Lapangan</span><h2>Galeri Kegiatan KJB</h2><p>Dokumentasi perjalanan, pelayanan, dan aksi kepedulian KJB. Ganti foto contoh di bawah dengan dokumentasi asli KJB.</p></div>
+        <div class="gallery-tools">
+          <button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="ambulans">Ambulans</button><button class="filter" data-filter="medis">Kegiatan Medis</button><button class="filter" data-filter="sosial">Sosial</button>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card" data-category="ambulans"><img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=800&q=80" alt="Armada ambulans"><div class="gallery-overlay"><small>Armada</small><b>Dokumentasi Ambulans</b></div></article>
+          <article class="gallery-card" data-category="medis"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80" alt="Tenaga medis"><div class="gallery-overlay"><small>Medis</small><b>Dukungan Tenaga Medis</b></div></article>
+          <article class="gallery-card" data-category="sosial"><img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80" alt="Kegiatan sosial"><div class="gallery-overlay"><small>Sosial</small><b>Kegiatan Kemanusiaan</b></div></article>
+          <article class="gallery-card" data-category="ambulans"><img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80" alt="Dukungan layanan kesehatan"><div class="gallery-overlay"><small>Pelayanan</small><b>Aktivitas Pelayanan</b></div></article>
+          <article class="gallery-card" data-category="medis"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Kegiatan kesehatan"><div class="gallery-overlay"><small>Medis</small><b>Edukasi dan Kesehatan</b></div></article>
+          <article class="gallery-card" data-category="sosial"><img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=800&q=80" alt="Relawan kegiatan sosial"><div class="gallery-overlay"><small>Sosial</small><b>Bergerak Bersama</b></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Orang-orang di Balik KJB</span><h2>Tim Kami</h2><p>Pelayanan yang baik dimulai dari tim yang peduli dan bertanggung jawab. Tambahkan nama serta foto personel yang telah mendapat persetujuan.</p></div>
+        <div class="service-grid">
+          <article class="team-card"><div class="team-avatar">＋</div><h3>Nama Personel</h3><p>Koordinator / Pengurus</p></article>
+          <article class="team-card"><div class="team-avatar">✚</div><h3>Nama Personel</h3><p>Tenaga Medis</p></article>
+          <article class="team-card"><div class="team-avatar">🚑</div><h3>Nama Personel</h3><p>Pengemudi Ambulans</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="container">
+        <div class="section-head center"><span class="eyebrow">Kabar Terbaru</span><h2>Berita & Kegiatan</h2><p>Bagikan aktivitas terbaru agar masyarakat dapat mengikuti perjalanan dan kontribusi KJB.</p></div>
+        <div class="news-grid">
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi kegiatan sosial"><div class="news-body"><small>KEGIATAN KJB</small><h3>Dokumentasi kegiatan terbaru</h3><p>Tambahkan ringkasan kegiatan, tanggal, dan lokasi setelah dokumentasi tersedia.</p></div></article>
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi kegiatan medis"><div class="news-body"><small>EDUKASI</small><h3>Informasi kesehatan masyarakat</h3><p>Gunakan bagian ini untuk membagikan edukasi kesehatan dari sumber tepercaya.</p></div></article>
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi ambulans"><div class="news-body"><small>INFORMASI</small><h3>Informasi layanan KJB</h3><p>Perbarui informasi ketersediaan layanan dan cara menghubungi tim KJB.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">Terhubung dengan Kami</span><h2>Ada yang bisa KJB bantu?</h2><p>Untuk informasi layanan, kerja sama kegiatan, atau pertanyaan lainnya, silakan hubungi kontak resmi KJB.</p><a class="btn btn-primary" id="main-wa" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Hubungi via WhatsApp ↗</a></div>
+        <div class="contact-box">
+          <div class="contact-row"><div class="service-icon">☎</div><div><b>WhatsApp / Telepon</b><span>+62 812-3456-7890 — GANTI NOMOR INI</span></div></div>
+          <div class="contact-row"><div class="service-icon">⌖</div><div><b>Wilayah Layanan</b><span>Batam, Kepulauan Riau — sesuaikan cakupan layanan</span></div></div>
+          <div class="contact-row"><div class="service-icon">✉</div><div><b>Email</b><span>emailresmi@contoh.com — ganti dengan email KJB</span></div></div>
+          <div class="contact-row"><div class="service-icon">◎</div><div><b>Media Sosial</b><span>Tambahkan Instagram / Facebook resmi KJB</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> <b>KJB — Kami Jaga Batam</b>. Seluruh hak cipta dilindungi.</span><span>Dibuat dengan semangat kepedulian.</span></div></footer>
+  <a class="wa-float" href="https://wa.me/6281234567890" target="_blank" rel="noopener">☏ WhatsApp KJB</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.filter').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+        const selected = button.dataset.filter;
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          card.hidden = selected !== 'all' && card.dataset.category !== selected;
+        });
+      });
+    });
+    document.querySelectorAll('.navlinks a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.navlinks').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
