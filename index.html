@@ -103,5 +103,64 @@
     navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
+<!-- KONTAK TAMBAHAN KJB -->
+<style>
+  .kjb-contact-extra {
+    background: #0b2340;
+    color: #fff;
+    padding: 35px 20px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .kjb-contact-extra h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .kjb-contact-extra p {
+    color: #dce8f3;
+  }
+
+  .kjb-contact-extra a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .kjb-wa {
+    background: #18b65b;
+  }
+
+  .kjb-email {
+    background: #df3e43;
+  }
+</style>
+
+<div class="kjb-contact-extra" id="kontak-kjb-tambahan">
+  <h2>Hubungi KJB</h2>
+  <p>Siaga untuk menjaga sesama.</p>
+
+  <p>WhatsApp: +62 813-9666-6681</p>
+  <p>Email: ambulance_kjb@gmail.com</p>
+
+  <a class="kjb-wa"
+     href="https://wa.me/628139666681"
+     target="_blank">
+    Hubungi WhatsApp
+  </a>
+
+  <a class="kjb-email"
+     href="mailto:ambulance_kjb@gmail.com">
+    Kirim Email
+  </a>
+</div>
+<!-- AKHIR KONTAK TAMBAHAN KJB -->
+</body>
+</html>
 </body>
 </html>
